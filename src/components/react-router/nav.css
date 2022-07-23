@@ -1,0 +1,17 @@
+.nav {
+	display: flex;
+	gap: 5px;
+}
+
+.navLink {
+    color: blue;
+    text-decoration: none;
+}
+
+.navLink:hover {
+    color: gray;
+}
+
+nav .active {
+	color: red;
+}
