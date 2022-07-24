@@ -5,13 +5,69 @@ const Contact = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div>
-			<div>Contact page</div>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam quibusdam adipisci
-				facilis non optio a dignissimos vitae, blanditiis aliquam commodi.
-			</p>
-			<button onClick={() => navigate("/")}>Go to home</button>
+		<div className="content-body">
+			<h3>Contact page (/contact)</h3>
+			<hr />
+			<table>
+				<tbody>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<button className="return-btn" onClick={() => navigate("/")}>Go to home</button>
 		</div>
 	);
 };

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
-import { blogData } from "../data/data";
+// import { blogData } from "../data/data";
 
 const SingleBlog = () => {
 	const location = useLocation();
@@ -15,11 +15,12 @@ const SingleBlog = () => {
 	// }, []);
 
 	return (
-		<article>
+		<article className="content-body">
 			<h3>{title}</h3>
+			<hr />
 			<p>{location.state?.data.body}</p>
 			<br />
-			<button onClick={() => navigate("/blog")}>Go to blogs</button>
+			<button className="return-btn" onClick={() => navigate("/blog")}>Go to blogs</button>
 		</article>
 	);
 };

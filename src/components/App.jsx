@@ -1,29 +1,18 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LearnRouter from "./react-router/Nav";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Contact from "../pages/Contact";
-import Blog from "../pages/Blog";
-import Error from "../pages/Error";
-import "./app.css";
+import React, { useState } from "react";
+import "./App.css";
+import Routers from "../routers";
 import Nav from "./react-router/Nav";
-import SingleBlog from "../pages/SingleBlog";
-import User from "../pages/User";
+import { BrowserRouter } from "react-router-dom";
+import { LoggedInContext } from "../contexts/LoggedInContext";
 
 function App(props) {
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	return (
 		<BrowserRouter>
-			<Nav />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/blog" element={<Blog />} />
-				<Route path="/blog/:title" element={<SingleBlog />} />
-				<Route path="/user" element={<User />} />
-				<Route path="*" element={<Error />} />
-			</Routes>
+			<LoggedInContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+				<Nav />
+				<Routers />
+			</LoggedInContext.Provider>
 		</BrowserRouter>
 	);
 }
