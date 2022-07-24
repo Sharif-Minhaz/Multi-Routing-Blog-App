@@ -1,4 +1,4 @@
-### React routing with `react-router-dom`
+### React routing with `react-router-dom` (6.3.0)
 
 ---
 
@@ -88,7 +88,7 @@ export default Protected;
 </Routes>
 ```
 
-### Handle params and search params
+#### Handle params and search params
 
 ```js
 // /user/?name=minhaz&age=22
